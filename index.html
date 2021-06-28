@@ -180,8 +180,8 @@
     <div>
         <input type="checkbox" name="rock" value="exotic"> Exotic
          </div>
-<label for="quantity">Quantity (between 1 and 5):</label>
-<input type="number" id="quantity" name="quantity" min="1" max="5">
+<label for="quantity">Quantity (between 1 and 3):</label>
+<input type="number" id="quantity" name="quantity" min="1" max="3">
 
         </input>
     </div>
@@ -189,7 +189,10 @@
           <label for="delivery">When you want it delivered (AT LEAST 24hrs please:</label>
   <input type="date" id="delivery" name="delivery" required>
     </div> 
-    
+            <div>
+    <label for="moreinfo">Anything else you want to add (quantity/more types of rocks)? Let us know</label>
+  <input type="text" id="moreinfo" name="moreinfo" optional>
+    </div>
 
   <button type="submit">Submit</button>
 </form>
