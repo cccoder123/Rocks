@@ -180,6 +180,8 @@
     <div>
         <input type="checkbox" name="rock" value="exotic"> Exotic
          </div>
+<label for="quantity">Quantity (between 1 and 5):</label>
+<input type="number" id="quantity" name="quantity" min="1" max="5">
 
         </input>
     </div>
@@ -191,10 +193,61 @@
 
   <button type="submit">Submit</button>
 </form>
+<h4> Not sure what rock to choose?</h4>
+<h7> Try out a random generator:</h7>
+<FORM NAME="WordForm">  
+<INPUT TYPE=wordbox NAME="WordBox" id="wordbox"><BR>
+<INPUT TYPE=BUTTON VALUE="Generate" onClick="PickRandomWord(document.WordForm);" id="button">
+</FORM>
+  <script>
+    var NumberOfWords = 18
+
+var words = new BuildArray(NumberOfWords)
+
+// Use the following variables to 
+// define your random words:
+words[1] = "Gravel: 10p"
+words[2] = "Normal: 24p"
+words[3] = "Slate: 30p"
+words[4] = "Rainrock: 80p"
+words[5] = "Special editions (only out occasionally): £1.20"
+words[6] = "Exotic: £2.50"
+words[7] = "Gravel: 10p"
+words[8] = "Normal: 24p"
+words[9] = "Slate: 30p"
+words[10] = "Rainrock: 80p"
+words[11] = "Special editions (only out occasionally): £1.20"
+words[12] = "Exotic: £2.50"
+words[13] = "Gravel: 10p"
+words[14] = "Normal: 24p"
+words[15] = "Slate: 30p"
+words[16] = "Rainrock: 80p"
+words[17] = "Special editions (only out occasionally): £1.20"
+words[18] = "Exotic: £2.50"
+
+
+
+
+function BuildArray(size){
+this.length = size
+for (var i = 1; i <= size; i++){
+this[i] = null}
+return this
+}
+
+function PickRandomWord(frm) {
+// Generate a random number between 1 and NumberOfWords
+var rnd = Math.ceil(Math.random() * NumberOfWords)
+
+// Display the word inside the text box
+frm.WordBox.value = words[rnd]
+}
+  </script>
+    
 <p>Price range is up <a href="#projects">here</a>.</p>
                         
                         <h2 class="text-white mb-5">Can't find us? Check spam, some verifiers end up there</h2>
-                        <h2 class="text-white mb-5">New memberships: Click <a href="http://rocky.tk/membership">here</a> to be a member.</h2>
+                        <h2 class="text-white mb-5">New memberships: Click <a href="membership.html">here</a> to be a member.</h2>
 
                     </div>
                 </div>
